@@ -1,0 +1,50 @@
+// Cool Div Official Style Guide Mixins
+
+@import "variables";
+
+// Cool divs
+@mixin base-cool-div {
+  text-align: center;
+  margin: 10px auto;
+  color: $color-primary-copy;
+  border-radius: $border-radius-default;
+  font-weight: 700;
+}
+
+@mixin default-size-div {
+  width: $width-regular;
+  height: $height-regular;
+  line-height: $height-regular;
+}
+
+@mixin slim-div {
+  width: $width-slim;
+  height: $height-slim;
+  line-height: $height-slim;
+}
+
+@mixin classic-cool-div {
+  @include base-cool-div;
+  @include default-size-div;
+  background: $color-sky;
+}
+
+@mixin premium-cool-div {
+  @include base-cool-div;
+  @include slim-div;
+  background: $color-peach;
+}
+
+// Buttons
+@mixin button {
+  padding: 10px 20px;
+  border-radius: $border-radius-default;
+  border: none;
+  outline: none;
+}
+
+@mixin submit-button {
+  @include button;
+  background: $color-leaf;
+  color: $color-primary-copy;
+}
