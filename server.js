@@ -2,7 +2,8 @@ const Express = require("express");
 const path = require("path");
 const server = Express();
 
-server.use(Express.static(__dirname + '/'));
+server.use(Express.static(__dirname + '/dist'));
+server.use(Express.static(__dirname + '/static'));
 
 server.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'))
