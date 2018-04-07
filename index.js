@@ -1,11 +1,4 @@
-function createCoolDiv() {
-  var newDiv = document.createElement("div");
-  var newContent = document.createTextNode("I'm a cool div");
-  newDiv.appendChild(newContent);
-  newDiv.classList.add("cool-div");
-
-  return newDiv;
-}
+const createCoolDiv = require("./create-cool-div");
 
 function addDiv() {
   var coolDivs = document.getElementById("cool-divs");
