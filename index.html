@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <title>Cool Div Maker</title>
+        <!--Viewport-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Let's make some cool divs!</h1>
+        <button class="btn" id="make-div">Click me to make a div!</button>
+        <div id="cool-divs"></div>
+        <script>
+            function createCoolDiv() {
+              var newDiv = document.createElement("div");
+              var newContent = document.createTextNode("I'm a cool div");
+              newDiv.appendChild(newContent);
+              newDiv.style.width = "300px";
+              newDiv.style.height = "100px";
+              newDiv.style.background = "aliceblue";
+              newDiv.style.margin = "10px";
+              newDiv.style.textAlign = "center";
+              newDiv.style.lineHeight = "100px";
+
+              return newDiv;
+            }
+
+            function addDiv() {
+              var coolDivs = document.getElementById("cool-divs");
+              var newCoolDiv = createCoolDiv();
+              coolDivs.appendChild(newCoolDiv);
+            }
+
+            var button = document.getElementById("make-div");
+            button.addEventListener("click", addDiv);
+        </script>
+    </body>
+</html>
