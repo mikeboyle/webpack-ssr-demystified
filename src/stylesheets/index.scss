@@ -1,0 +1,25 @@
+@import "mixins";
+
+.cool-div-app {
+  max-width: 320px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Roboto', serif;
+  color: $color-primary-copy;
+
+  .btn {
+    @include submit-button;
+  }
+}
+
+.cool-divs {
+  .cool-div {
+    &:nth-child(odd) {
+      @include classic-cool-div;
+    }
+
+    &:nth-child(even) {
+      @include premium-cool-div;
+    }
+  }
+}
